@@ -1,0 +1,24 @@
+{
+  "name": "sass-build",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run scss && npm run autoprefix",
+    "scss": "node-sass src/scss/styles.scss dist/styles.css --source-map-embed",
+    "autoprefix": "postcss dist/styles.css --use autoprefixer --output dist/styles.css",
+    "working-example": "npm run scss"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^9.4.4",
+    "bootstrap": "^4.2.1",
+    "node-sass": "^4.11.0",
+    "nodemon": "^1.18.9",
+    "postcss-cli": "^6.1.1"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 10"
+  ]
+}
